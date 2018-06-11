@@ -61,20 +61,6 @@
 </div>
 <script type='text/javascript'>
 	$(document).ready(function() {
-		$('td').click(function() {
-			var result = [
-					{"_id":"5b1d8df1f6f0a82d6c454625","name":"Twilio"},
-					{"_id":"5b1d8e03f6f0a82d6c454626","name":"Spotify"}
-				];
-				for(var i=0; i < result.length; i++) {
-					/*
-					var obj = result[i];
-					var nameValue = obj.name; // obj["name"]
-					$('#api-result').append(nameValue + '</br>');
-					*/
-					$('#api-result').append(result[i].name + '</br>');
-				}
-		});
 		$('#submit-button').click(function() {
 			// get info from a public api and display the results on the screen
 	        $.ajax({
@@ -82,7 +68,7 @@
 	            // cache: false,
 	            type: 'GET',
 				crossDomain: true,
-	            url: 'http://voteapi.empower2018.us/tahbaza/vote',
+	            url: 'http://voteapi.empower2018.us/apis',
 	            success: function (result) {
 /* we get this type of thing back:
 [
